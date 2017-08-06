@@ -1,2 +1,0 @@
-# chess
-Two player chess 
