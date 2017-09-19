@@ -25,26 +25,21 @@ public class checkmate {
     boolean flag, t;
     boolean flag1;
     int block[][] = new int[10][10];
-
     checkmate(check ob3, game2 ob4, board ob5) {
-
         ob = ob3;
         ob1 = ob4;
         ob2 = ob5;
     }
-
     boolean edit(int row, int column, String col) {
         if (col == "white") {
             colour = "black";
         } else {
             colour = "white";
         }
-
         for (int k = 0; k < 8; k++) {
             tx = row + ob1.kingfx[k];
             ty = column + ob1.kingfy[k];
             if (((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) && !ob2.grid[tx][ty].col.equals(col)) {
-
                 set(col, row, column, 1, tx, ty);
                 flag = pass();
                 set1(col, row, column, 1, tx, ty);
@@ -53,7 +48,6 @@ public class checkmate {
                 }
             }
         }
-
         for (int i = 1; i <= 8; i++) {
             for (int j = 1; j <= 8; j++) {
                 block[i][j] = 0;
@@ -62,18 +56,12 @@ public class checkmate {
         for (int i = 0; i < ob.r.size(); i++) {
             int x = ob.r.get(i);
             int y = ob.c.get(i);
-
             block[x][y] = 1;
         }
-
         for (int i = 1; i <= 8; i++) {
-
             for (int j = 1; j <= 8; j++) {
-
                 if (ob2.grid[i][j].col.equals(col)) {
-
                     if (ob2.grid[i][j].player == 6) {
-
                         for (int k = 0; k < 4; k++) {
                             t = false;
                             switch (col) {
@@ -86,20 +74,15 @@ public class checkmate {
                                     ty = j + ob1.bpawnfy[k];
                                     break;
                             }
-
                             if ((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) {
-
                                 if (block[tx][ty] == 1) {
-
                                     if (k == 3) {
-
                                         if (col.equals("white")) {
                                             if ((ob2.grid[i][j].y1 >= 520 && ob2.grid[i][j].y2 <= 600) && ob2.grid[tx][ty].player == 0) {
                                                 if (ob2.grid[tx + 1][ty].player == 0) {
                                                     t = true;
                                                 }
                                             }
-
                                         } else {
                                             if ((ob2.grid[i][j].y1 >= 120 && ob2.grid[i][j].y2 <= 200) && ob2.grid[tx][ty].player == 0) {
                                                 if (ob2.grid[tx - 1][ty].player == 0) {
@@ -108,7 +91,6 @@ public class checkmate {
                                             }
                                         }
                                     }
-
                                     if (k <= 1) {
                                         if (!ob2.grid[tx][ty].col.equals(col)) {
                                             t = true;
@@ -116,7 +98,6 @@ public class checkmate {
                                     }
                                     if (k == 2) {
                                         if (ob2.grid[tx][ty].player == 0) {
-
                                             t = true;
                                         }
                                     }
@@ -132,16 +113,13 @@ public class checkmate {
 
                                 }
                             }
-
                         }
                     } else if (ob2.grid[i][j].player == 4) {
                         for (int k = 0; k < 8; k++) {
                             tx = i + ob1.knightfx[k];
                             ty = j + ob1.knightfy[k];
                             if ((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) {
-
                                 if (block[tx][ty] == 1 && !ob2.grid[tx][ty].col.equals(col)) {
-
                                     set(col, i, j, 4, tx, ty);
                                     flag = pass();
                                     set1(col, i, j, 4, tx, ty);
@@ -153,15 +131,11 @@ public class checkmate {
                         }
                     } else if (ob2.grid[i][j].player == 2) {
                         for (int k = 0; k < 56; k++) {
-
                             tx = i + ob1.queenfx[k];
                             ty = j + ob1.queenfy[k];
                             if ((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) {
-
                                 if (ob2.grid[tx][ty].player != 0) {
-
                                     if (k < 6) {
-
                                         k = 6;
                                     } else if (k < 13) {
                                         k = 13;
@@ -191,15 +165,11 @@ public class checkmate {
                         }
                     } else if (ob2.grid[i][j].player == 3) {
                         for (int k = 0; k < 28; k++) {
-
                             tx = i + ob1.bishopfx[k];
                             ty = j + ob1.bishopfy[k];
                             if ((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) {
-
                                 if (ob2.grid[tx][ty].player != 0) {
-
                                     if (k < 6) {
-
                                         k = 6;
                                     } else if (k < 13) {
                                         k = 13;
@@ -217,20 +187,15 @@ public class checkmate {
                                         return false;
                                     }
                                 }
-
                             }
                         }
                     } else if (ob2.grid[i][j].player == 5) {
                         for (int k = 0; k < 28; k++) {
-
                             tx = i + ob1.rookfx[k];
                             ty = j + ob1.rookfy[k];
                             if ((tx >= 1 && tx <= 8) && (ty >= 1 && ty <= 8)) {
-
                                 if (ob2.grid[tx][ty].player != 0) {
-
                                     if (k < 6) {
-
                                         k = 6;
                                     } else if (k < 13) {
                                         k = 13;
@@ -256,7 +221,6 @@ public class checkmate {
         }
         return true;
     }
-
     public boolean pass() {
         boolean flag2 = false;
         for (int i = 1; i <= 8; i++) {
@@ -269,10 +233,8 @@ public class checkmate {
                 }
             }
         }
-
         return true;
     }
-
     public void set(String col, int i, int j, int player, int x, int y) {
         this.tempplayer = ob2.grid[x][y].player;
         this.tempig = ob2.grid[x][y].image;
@@ -282,9 +244,7 @@ public class checkmate {
         ob2.grid[x][y].col = col;
         ob2.grid[i][j].player = 0;
         ob2.grid[i][j].col = "nil";
-
     }
-
     public void set1(String col, int i, int j, int player, int x, int y) {
         ob2.grid[i][j].player = player;
         ob2.grid[i][j].col = col;
