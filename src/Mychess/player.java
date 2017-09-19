@@ -23,12 +23,9 @@ public class player {
     int y1, y2;
 
     player(board ob1) {
-
         ob = ob1;
     }
-
     public void edit() {
-
         ref = new chess();
         ref.col = "black";
         ref.player = 5;
@@ -37,7 +34,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][1] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 4;
@@ -46,7 +42,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][2] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 3;
@@ -55,7 +50,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][3] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 2;
@@ -64,7 +58,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][4] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 1;
@@ -73,7 +66,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][5] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 3;
@@ -82,7 +74,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][6] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 4;
@@ -91,7 +82,6 @@ public class player {
         ref.y1 = 40;
         ref.y2 = 119;
         ob.grid[1][7] = ref;
-
         ref = new chess();
         ref.col = "black";
         ref.player = 5;
@@ -105,7 +95,6 @@ public class player {
         y1 = 121;
         y2 = 199;
         for (int i = 1; i <= 8; i++) {
-
             ref = new chess();
             ref.x1 = x1;
             ref.x2 = x2;
@@ -122,9 +111,7 @@ public class player {
         for (int i = 3; i <= 6; i++) {
             x1 = 21;
             x2 = 99;
-
             for (int j = 1; j <= 8; j++) {
-
                 ref = new chess();
                 ref.x1 = x1;
                 ref.x2 = x2;
@@ -135,7 +122,6 @@ public class player {
                 ob.grid[i][j] = ref;
                 x1 = x1 + 80;
                 x2 = x2 + 80;
-
             }
             y1 = y1 + 80;
             y2 = y2 + 80;
@@ -156,7 +142,6 @@ public class player {
             x1 = x1 + 80;
             x2 = x2 + 80;
         }
-
         ref = new chess();
         ref.col = "white";
         ref.player = 5;
@@ -165,7 +150,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][1] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 4;
@@ -174,7 +158,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][2] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 3;
@@ -192,7 +175,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][4] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 1;
@@ -201,7 +183,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][5] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 3;
@@ -210,7 +191,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][6] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 4;
@@ -219,7 +199,6 @@ public class player {
         ref.y1 = 601;
         ref.y2 = 679;
         ob.grid[8][7] = ref;
-
         ref = new chess();
         ref.col = "white";
         ref.player = 5;
@@ -260,7 +239,5 @@ public class player {
         ref.player=0;
         ref.col="nil";
         ob.grid[4][9] = ref;
-   
     }
-
 }
