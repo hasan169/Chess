@@ -18,7 +18,5 @@ public class Mychess {
     public static void main(String[] args) {
         // TODO code application logic here
         board ob = new board();
-    
     }
-
 }
