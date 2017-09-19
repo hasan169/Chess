@@ -12,7 +12,6 @@ import java.awt.Image;
  * @author Shagor Hasan
  */
 public class chess {
-
     int x1;
     int y1;
     int x2;
@@ -20,5 +19,4 @@ public class chess {
     int player;
     String col;
     Image image;
-
 }
