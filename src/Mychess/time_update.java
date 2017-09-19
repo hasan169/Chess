@@ -20,15 +20,13 @@ public class time_update implements ActionListener {
     int y;
     int z;
     Timer t1 = new Timer(1000, this);
-
+    
     time_update(board ob1) {
-
         this.ob = ob1;
         x = 1;
         y = 5;
         z = 9;
     }
-
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ob.draw) {
@@ -51,12 +49,8 @@ public class time_update implements ActionListener {
             if (ob.playerone) {
                 ob.playertwowin = true;
             } else {
-
                 ob.playeronewin = true;
-
             }
-
         }
-
     }
 }
